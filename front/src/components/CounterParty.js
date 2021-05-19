@@ -81,7 +81,7 @@ class CounterPartyForm extends Component {
     }
 
     fetchDeliveryStations() {
-        fetch("http://localhost:8000/fuel/deliverystation", {
+        fetch("http://82.148.16.250:8000/fuel/deliverystation", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -113,7 +113,7 @@ class CounterPartyForm extends Component {
                 ogrn: this.state.ogrn,
             })
         };
-        fetch("http://localhost:8000/fuel/counterparty/" + this.state.id + '/', requestOptions)
+        fetch("http://82.148.16.250:8000/fuel/counterparty/" + this.state.id + '/', requestOptions)
             .then( response => {
                     console.log(response)
                     if (!(response.status === 200)) {
@@ -247,7 +247,7 @@ class CounterParty extends Component {
     }
 
     fetchStations() {
-        fetch("http://localhost:8000/fuel/counterparty", {
+        fetch("http://82.148.16.250:8000/fuel/counterparty", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }

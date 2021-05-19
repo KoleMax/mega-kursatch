@@ -94,7 +94,7 @@ class StationForm extends Component {
     }
 
     fetchOrganizations() {
-        fetch("http://localhost:8000/fuel/organization/", {
+        fetch("http://82.148.16.250:8000/fuel/organization/", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -111,7 +111,7 @@ class StationForm extends Component {
     }
 
     fetchStations() {
-        fetch("http://localhost:8000/fuel/station/", {
+        fetch("http://82.148.16.250:8000/fuel/station/", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -126,7 +126,7 @@ class StationForm extends Component {
     }
 
     fetchContracts() {
-        fetch("http://localhost:8000/fuel/contract?station=" + this.state.name, {
+        fetch("http://82.148.16.250:8000/fuel/contract?station=" + this.state.name, {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -155,7 +155,7 @@ class StationForm extends Component {
                 destination_station: this.state.destination_station,
             })
         };
-        fetch("http://localhost:8000/fuel/station/" + this.state.id + '/', requestOptions)
+        fetch("http://82.148.16.250:8000/fuel/station/" + this.state.id + '/', requestOptions)
             .then( response => {
                     console.log(response)
                     if (!(response.status === 200)) {
@@ -302,7 +302,7 @@ class Station extends Component {
     }
 
     fetchStations() {
-        fetch("http://localhost:8000/fuel/station/", {
+        fetch("http://82.148.16.250:8000/fuel/station/", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }

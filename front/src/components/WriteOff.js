@@ -80,7 +80,7 @@ class WriteOffForm extends Component {
     }
 
     fetchFuelTypes() {
-        fetch("http://localhost:8000/fuel/type/", {
+        fetch("http://82.148.16.250:8000/fuel/type/", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -97,7 +97,7 @@ class WriteOffForm extends Component {
     }
 
     fetchStations() {
-        fetch("http://localhost:8000/fuel/station/", {
+        fetch("http://82.148.16.250:8000/fuel/station/", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -122,7 +122,7 @@ class WriteOffForm extends Component {
     handleSubmit(event) {
 
         let method
-        let url = "http://localhost:8000/fuel/writeoff/"
+        let url = "http://82.148.16.250:8000/fuel/writeoff/"
 
         if (this.state.id !== null) {
             method = 'PUT'
@@ -302,7 +302,7 @@ class WriteOff extends Component {
     }
 
     fetchWriteOffs() {
-        fetch("http://localhost:8000/fuel/writeoff/", {
+        fetch("http://82.148.16.250:8000/fuel/writeoff/", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }

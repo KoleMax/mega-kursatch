@@ -33,7 +33,7 @@ class Report extends Component {
     }
 
     fetchOrganizations() {
-        fetch("http://localhost:8000/fuel/organization/", {
+        fetch("http://82.148.16.250:8000/fuel/organization/", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -50,7 +50,7 @@ class Report extends Component {
     }
 
     fetchStations() {
-        fetch("http://localhost:8000/fuel/station/", {
+        fetch("http://82.148.16.250:8000/fuel/station/", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }

@@ -152,7 +152,7 @@ class CounterPartyForm extends Component {
     }
 
     fetchFuels() {
-        fetch("http://localhost:8000/fuel/type", {
+        fetch("http://82.148.16.250:8000/fuel/type", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -176,7 +176,7 @@ class CounterPartyForm extends Component {
     }
 
     fetchProviders() {
-        fetch("http://localhost:8000/fuel/counterparty/get_providers", {
+        fetch("http://82.148.16.250:8000/fuel/counterparty/get_providers", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -193,7 +193,7 @@ class CounterPartyForm extends Component {
     }
 
     fetchShippers() {
-        fetch("http://localhost:8000/fuel/counterparty/get_shippers", {
+        fetch("http://82.148.16.250:8000/fuel/counterparty/get_shippers", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -215,7 +215,7 @@ class CounterPartyForm extends Component {
     }
 
     fetchStations() {
-        fetch("http://localhost:8000/fuel/station/", {
+        fetch("http://82.148.16.250:8000/fuel/station/", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -244,7 +244,7 @@ class CounterPartyForm extends Component {
 
     handleSubmit(event) {
         let method = 'POST'
-        let url = "http://localhost:8000/fuel/contract/"
+        let url = "http://82.148.16.250:8000/fuel/contract/"
         if (this.state.id !== null) {
             method = 'PUT'
             url += this.state.id + '/'
@@ -292,7 +292,7 @@ class CounterPartyForm extends Component {
     }
 
     fetchOrganizations() {
-        fetch("http://localhost:8000/fuel/organization", {
+        fetch("http://82.148.16.250:8000/fuel/organization", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }
@@ -627,7 +627,7 @@ class Contracts extends Component {
     }
 
     fetchContracts() {
-        fetch("http://localhost:8000/fuel/contract", {
+        fetch("http://82.148.16.250:8000/fuel/contract", {
             headers: {
                 Authorization: `JWT ${localStorage.getItem('token')}`
             }

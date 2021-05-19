@@ -29,7 +29,7 @@ class App extends Component {
 
     componentDidMount() {
         if (this.state.logged_in) {
-            fetch('http://localhost:8000/fuel/current_user/', {
+            fetch('http://82.148.16.250:8000/fuel/current_user/', {
                 headers: {
                     Authorization: `JWT ${localStorage.getItem('token')}`
                 }
@@ -43,7 +43,7 @@ class App extends Component {
 
     handle_login = (e, data) => {
         e.preventDefault();
-        fetch('http://localhost:8000/token-auth/', {
+        fetch('http://82.148.16.250:8000/token-auth/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ class App extends Component {
 
     handle_signup = (e, data) => {
         e.preventDefault();
-        fetch('http://localhost:8000/fuel/users/', {
+        fetch('http://82.148.16.250:8000/fuel/users/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
