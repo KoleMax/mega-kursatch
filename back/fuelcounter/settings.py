@@ -26,6 +26,7 @@ SECRET_KEY = 'iy7@=gtvscqy((99%%$*uf$g1g50)v_vc6-27103+v%q7mmc$2'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
     '82.148.16.250'
 ]
 
@@ -58,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'core.middle.open_access_middleware'
 ]
 
 REST_FRAMEWORK = {
